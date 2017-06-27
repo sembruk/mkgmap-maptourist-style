@@ -1,5 +1,6 @@
 
 INPUT?=		input/example.osm.pbf
+NAME?=      Maptourist
 
 STYLE?=		config
 #TYP?=       M00001e0.TYP
@@ -54,10 +55,10 @@ convert:
 	mkdir -p output
 	${MKGMAP} \
 		--output-dir=output \
-		--description="OSM MapTourist" \
-		--family-name="OSM MapTourist `date "+%Y-%m-%d"`" \
-		--series-name="OSM MapTourist `date "+%Y-%m-%d"`" \
-		--overview-mapname="OSM_MapTourist" \
+		--description="OSM ${NAME}" \
+		--family-name="OSM ${NAME} `date "+%Y-%m-%d"`" \
+		--series-name="OSM ${NAME} `date "+%Y-%m-%d"`" \
+		--overview-mapname="OSM_${NAME}" \
 		--area-name="OSM `date "+%Y-%m-%d"`" \
 		--family-id=${ID} \
 		--keep-going \
