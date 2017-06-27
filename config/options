@@ -18,6 +18,7 @@
 # The levels specification for this style
 # 
 levels = 0:24, 1:22, 2:21, 3:19, 4:18, 5:16
+overview-levels = 6:17
 
-# name-tag-list = name:ru,name,name:en,int_name
-# name-tag-list = name:cz,name,name:en,int_name
+#name-tag-list = name:ru,name,name:en,int_name
+#name-tag-list = name:cz,name,name:en,int_name

@@ -145,12 +145,14 @@ amenity=fast_food & cuisine ~ '.*pizza.*' [0x2a0a resolution 24 default_name 'п
 amenity=fast_food [0x2a07 resolution 24 default_name 'быстрое питание']
 amenity=fire_station [0x3008 resolution 24 default_name 'пожарная часть']
 amenity=food_court [0x2a13 resolution 24 default_name 'кафе']
-amenity=fuel & fuel:lpg=yes { name '${name}' | '${operator}' | 'АГНС'} 
+amenity=fuel & fuel:diesel=yes & fuel:lpg=yes { name '${name} (ДТ, АГНС)' | '${operator} (ДТ, АГНС)' | 'АЗС ДТ, АГНС'}
+amenity=fuel & fuel:diesel=yes { name '${name} (ДТ)' | '${operator} (ДТ)' | 'АЗС (ДТ)'}
+amenity=fuel & fuel:lpg=yes { name '${name} (АГНС)' | '${operator} (АГНС)' | 'АГНС'}
 amenity=fuel { name '${name}' | '${operator}' } 
 	[0x2f01 resolution 24 continue default_name 'АЗС']
 amenity=fuel { name '${name}' | '${operator}' } 
 	[0x11603 resolution 19 continue default_name 'АЗС']
-amenity=fuel & fuel:HGV_diesel=yes [ 0x2f16 resolution 18 default_name 'азс (дизель)']
+# amenity=fuel & fuel:HGV_diesel=yes [ 0x2f16 resolution 18 default_name 'азс (дизель)']
 amenity=fuel & shop=convenience [ 0x2e06 resolution 18]
 amenity=grave_yard [0x6403 resolution 24 default_name 'кладбище']
 amenity=hospital [0x3002 resolution 24 default_name 'больница']
@@ -457,7 +459,7 @@ barrier=gate
 barrier=lift_gate 
 	{set access = no} [0x5800 resolution 24 default_name 'шлагбаум']
 amenity=signpost { name '${label}' } [0x5a00 resolution  21 default_name 'указатель']
-traffic_sign=city_limit [0x56 resolution 21 default_name 'ограничение']
+traffic_sign=city_limit [0x5600 resolution 21 default_name 'ограничение']
 highway=ford | ford=yes [0x6406 resolution 21 default_name 'брод']
 
 ### Добавляем еще разных точек ###
@@ -476,7 +478,7 @@ military=bunker & mkgmap:area2poi!=true [0x640b resolution 24 default_name 'бу
 highway=* & bridge=yes | bridge=yes [0x6401 resolution 24 continue default_name 'мост']
 
 # маяки
-man_made=lighthouse [0x16 resolution 19 default_name 'маяк']
+man_made=lighthouse [0x1600 resolution 19 default_name 'маяк']
 
 # точки из Whitewater 
 # http://wiki.openstreetmap.org/wiki/WikiProject_Whitewater_Maps
