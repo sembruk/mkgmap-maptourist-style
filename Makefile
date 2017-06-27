@@ -1,6 +1,6 @@
 
 INPUT?=		input/example.osm.pbf
-NAME?=      Maptourist
+NAME?=		Maptourist
 
 STYLE?=		config
 #TYP?=       M00001e0.TYP

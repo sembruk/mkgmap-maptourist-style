@@ -292,7 +292,7 @@ railway=abandoned | (railway=* & abandoned=yes) | railway=disused
 railway=narrow_gauge & disused=yes { name '${name} (недейств.)' | 'недейств.' }
 
 # узкоколейка
-railway=narrow_gauge { name '${name} (узкоколейка)' | 'узкоколейка' }
+railway=narrow_gauge { name '${name} (УЖД)' | 'УЖД' }
 
 # Разделяем ЖД с трамваями и выносим их в кастомные типы
 # railway=abandoned [0x0a road_class=0 road_speed=1 resolution 21]

@@ -106,7 +106,7 @@ internet_access=* { name '${internet_access|subst:yes=>Internet} ${name|def:}' }
 #aeroway=airport [0x5900 resolution 18]
 aeroway=airport [0x2f04 resolution 18 default_name 'аэропорт']
 aeroway=aerodrome [0x2f04 resolution 18 default_name 'аэродром']
-aeroway=helipad [0x5904 resolution 21 default_name 'вертолетная']
+aeroway=helipad [0x5904 resolution 21 default_name 'верт.пл.']
 aeroway=terminal [0x2f04 resolution 21 default_name 'терминал']
 
 amenity=airport [0x2f04 resolution 18 default_name 'аэропорт']
@@ -134,7 +134,8 @@ amenity=courthouse [0x3004 resolution 24 default_name 'суд']
 amenity=doctors [0x3002 resolution 24 default_name 'поликлиника']
 amenity=dentist [0x3002 resolution 24 default_name 'стоматология']
 amenity=clinic [0x3002 resolution 24 default_name 'клиника']
-amenity=drinking_water | man_made=water_well [0x5000 resolution 24 default_name 'вода']
+amenity=drinking_water [0x5000 resolution 24 default_name 'вода']
+an_made=water_well [0x5000 resolution 24 default_name 'колодец']
 amenity=embassy & country=* { name '${country} ${name|def:}' } [0x3003 resolution 24 default_name 'посольство']
 amenity=embassy & country!=* [0x3003 resolution 24 default_name 'посольство']
 amenity=emergency_phone [0x2f12 resolution 21 default_name 'экстренный телефон']
@@ -162,15 +163,15 @@ amenity=nightclub [0x2d02 resolution 24 default_name 'ночной клуб']
 amenity=nursing_home [0x2b04 resolution 24 default_name 'дом пристарелых']
 amenity=parking [0x2f0b resolution 24 default_name 'парковка']
 amenity=pharmacy [0x2e05 resolution 24 default_name 'аптека']
-amenity=place_of_worship [0x11602 resolution 21 continue default_name 'храм']
-amenity=place_of_worship [0x2c0b resolution 24 default_name 'храм']
+amenity=place_of_worship [0x11602 resolution 21 continue default_name]
+amenity=place_of_worship [0x2c0b resolution 24 default_name]
 amenity=police [0x3001 resolution 24 default_name 'полиция']
 amenity=post_office [0x2f05 resolution 24 default_name 'почта']
 amenity=prison [0x3007 resolution 24 default_name 'тюрьма']
 amenity=pub [0x2d02 resolution 24 default_name 'паб']
 amenity=public_building [0x3007 resolution 24 default_name 'общественное здание']
 amenity=recycling | amenity=waste_disposal { name '${name} (${operator})' | '${name}' | '${operator}' }
-amenity=recycling | amenity=waste_disposal [0x2f15 resolution 24 default_name 'помойка']
+amenity=recycling | amenity=waste_disposal [0x2f15 resolution 24]
 amenity=restaurant & cuisine=american [0x2a01 resolution 24 default_name 'американская']
 amenity=restaurant & cuisine=asian [0x2a02 resolution 24 default_name 'азиатская']
 amenity=restaurant & cuisine=bagel [0x2a0d resolution 24 default_name 'бублики']
@@ -319,7 +320,7 @@ cladr:suffix='Поселок городского типа'
 | cladr:suffix='посёлок городского типа'
 | cladr:suffix='поселок городского типа'{set cladr:suffix = 'пгт' }
 cladr:suffix='почтовое отделение'
-| cladr:suffix='Почтовое отделение'	{set cladr:suffix = 'п/о.' }
+| cladr:suffix='Почтовое отделение'	{set cladr:suffix = 'п/о' }
 cladr:suffix='Рабочий поселок'
 | cladr:suffix='Рабочий посёлок'
 | cladr:suffix='рабочий посёлок'
