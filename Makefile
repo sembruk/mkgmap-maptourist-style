@@ -2,7 +2,8 @@
 INPUT?=		input/example.osm.pbf
 
 STYLE?=		config
-TYP?=       M00001e0.TYP
+#TYP?=       M00001e0.TYP
+TYP?=       maptourist_plus.txt
 ID?=        480
 PAD?=		00000000
 MAPID?=		${shell echo ${ID}${PAD} | cut -c1-8}
@@ -68,7 +69,7 @@ convert:
 		-c splitted/template.args ${STYLE}/${TYP}
 
 	# copy typ file for qlandkartegt
-	cp ${STYLE}/${TYP} output/${TYP}
+	#cp ${STYLE}/${TYP} output/${TYP}
 
 clean:
 	rm -rf boundary/* splitted/* logs/* output/*
