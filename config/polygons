@@ -177,7 +177,7 @@ leisure=swimming_pool | amenity=swimming_pool {set sport=swimming}
 leisure=swimming_pool { name 'д${addr:housenumber} (${name}) ${addr:street}' | 'д${addr:housenumber} ${addr:street}' | 'д${addr:housenumber}'} [0x19 resolution 24 default_name 'бассейн']
 leisure=track { name '${name} (${sport})' | '${name}' } [0x19 resolution 24]
 leisure=water_park [0x09 resolution 18]
-leisure=resort [0x0d resolution 21]
+leisure=resort | leisure=summer_camp [0x0d resolution 21]
 
 military=airfield [0x04 resolution 18]
 military=barracks [0x04 resolution 18]
