@@ -136,8 +136,8 @@ landuse=cemetary [0x1a resolution 21]
 landuse=cemetery [0x1a resolution 21]
 landuse=commercial [0x0c resolution 21]
 landuse=construction [0x0c resolution 21]
-# landuse=farm перенесен в landuse=farmland
-# landuse=farm [0x4e resolution 21]
+landuse=farm [0x10f00 resolution 21]
+landuse=farmland [0x10f00 resolution 21]
 landuse=farmyard [0x4e resolution 21]
 landuse=forest [0x15 resolution 21]
 landuse=greenfield [0x17 resolution 21]
@@ -159,6 +159,7 @@ landuse=vineyard [0x4e resolution 21]
 landuse=wood [0x50 resolution 21]
 landuse=logging [0x1101b resolution 21]
 landuse=landfill [0x0f resolution 21]
+landuse=peat_cutting [0x10102 resolution 19]
 
 leisure=common [0x18 resolution 21]
 leisure=garden [0x17 resolution 21]
@@ -167,7 +168,7 @@ leisure=ice_rink [0x19 resolution 24 default_name 'каток']
 leisure=marina [0x09 resolution 21]
 leisure=nature_reserve | leisure=natural_reserve | landuse=nature_reserve | landuse=natural_reserve [0x16 resolution 19-18 continue]
 leisure=park [0x17 resolution 21]
-leisure=pitch { name '${name} (${sport})' | '${name}' } [0x19 resolution 24 default_name 'площадка']
+leisure=pitch { name '${name} (${sport})' | '${name}' } [0x19 resolution 24]
 leisure=playground [0x17 resolution 21]
 leisure=recreation_ground [0x50 resolution 19]
 leisure=sports_center | leisure=sports_centre { name '${name} (${sport})' | '${name}' } [0x24 resolution 22]
@@ -176,16 +177,19 @@ leisure=swimming_pool | amenity=swimming_pool {set sport=swimming}
 leisure=swimming_pool { name 'д${addr:housenumber} (${name}) ${addr:street}' | 'д${addr:housenumber} ${addr:street}' | 'д${addr:housenumber}'} [0x19 resolution 24 default_name 'бассейн']
 leisure=track { name '${name} (${sport})' | '${name}' } [0x19 resolution 24]
 leisure=water_park [0x09 resolution 18]
+leisure=resort [0x0d resolution 21]
 
 military=airfield [0x04 resolution 18]
 military=barracks [0x04 resolution 18]
 military=danger_area [0x04 resolution 18]
 military=range [0x04 resolution 18]
 
+natural=cliff [0x10118 resolution 21]
 natural=glacier [0x4d resolution 16]
 natural=marsh [0x51 resolution 21 continue]
 natural=mud [0x51 resolution 21 continue]
 natural=wetland [0x51 resolution 21 continue]
+natural=heath | natural=grassland [0x18 resolution 21]
 natural=scrub [0x4f resolution 21]
 natural=waterfall | waterway=waterfall [0x47 resolution 21]
 natural=sea | natural=bay [0x32 resolution 16 continue]
@@ -324,29 +328,4 @@ man_made=pier  [0x0d resolution 21]
 man_made=* { name 'д${addr:housenumber} (${name}) ${addr:street}' | 'д${addr:housenumber} ${addr:street}' | 'д${addr:housenumber}'} [0x13 resolution 24]
 (building=* | bridge=yes & area=yes) { name 'д${addr:housenumber} (${name}) ${addr:street}' | 'д${addr:housenumber} ${addr:street}' | 'д${addr:housenumber}'} [0x13 resolution 24]
 tourism=* & building!=* { name 'д${addr:housenumber} (${name}) ${addr:street}' | 'д${addr:housenumber} ${addr:street}' | 'д${addr:housenumber}' | '${name}' } [0x0d resolution 21]
-
-# My
-landuse=peat_cutting [0x10102 resolution 19]
-
-# моря в озера
-# natural=coastline [0x003f resolution 16 continue]
-
-# place=town & landuse=residential [0x01 resolution 16 continue]
-# place=city & landuse=residential [0x01 resolution 16 continue]
-# place=village & landuse=residential [0x03 resolution 19 continue]
-# place=hamlet & landuse=residential [0x03 resolution 21 continue]
-
-natural=heath | natural=grassland [0x18 resolution 21]
-
-# поля и огороды
-landuse=farmland [0x10f00 resolution 21]
-landuse=farm [0x10f00 resolution 21]
-
-natural=cliff [0x10118 resolution 21]
-
-# boundary=administrative & admin_level=4 & name='Тверская область' [0x4b resolution 16 continue]
-# boundary=administrative & admin_level=4 & name='Новгородская область' [0x4b resolution 16 continue]
-# boundary=administrative & admin_level=4 & name='Костромская область' [0x4b resolution 16 continue]
-# boundary=administrative & admin_level=4 & name='Вологодская область' [0x4b resolution 16 continue]
-# boundary=administrative & admin_level=4 & name='Ярославская область' [0x4b resolution 16 continue]
 
