@@ -189,9 +189,11 @@ natural=wetland [0x51 resolution 21 continue]
 natural=scrub [0x4f resolution 21]
 natural=waterfall | waterway=waterfall [0x47 resolution 21]
 natural=sea | natural=bay [0x32 resolution 16 continue]
-natural=wood & wood=coniferous [0x10100 resolution 21]
-natural=wood & wood=deciduous [0x10101 resolution 21]
+natural=wood & (wood=coniferous | leaf_type=needleleaved) [0x10100 resolution 21]
+natural=wood & (wood=deciduous | leaf_type=broadleaved) [0x10101 resolution 21]
 natural=wood 
+    & leaf_type!=needleleaved
+    & leaf_type!=broadleaved
     & wood:age!=very_young
     & wood:age!=young
     & wood:age!=juvenile [0x50 resolution 21]
