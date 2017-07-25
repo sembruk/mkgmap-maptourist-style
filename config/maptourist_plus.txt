@@ -1550,13 +1550,13 @@ ExtendedLabels=N
 Type=0x0a
 ;GRMN_TYPE: Roads/UNPAVED_ROAD/Gravel or dirt road/Non NT, NT
 UseOrientation=Y
-Xpm="32 1 4  1"
+Xpm="32 2 4 1"
 "! c #020202"
 "  c none"
 "3 c #E0E0E0"
 "4 c none"
-" !!!!!!  !!!!!!  !!!!!!  !!!!!! "
-" !!!!!!  !!!!!!  !!!!!!  !!!!!! "
+" !!!!!!!!   !!!!!!!!   !!!!!!!! "
+" !!!!!!!!   !!!!!!!!   !!!!!!!! "
 ;12345678901234567890123456789012
 String1=0x19,грунтовка
 String2=0x04,track
@@ -1601,13 +1601,12 @@ ExtendedLabels=N
 Type=0x0e
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_ROUTE_LINE_2/Routable customizable line/Non NT, NT
 UseOrientation=Y
-Xpm="32 2 4  1"
+Xpm="32 1 4 1"
 "! c #000000"
 "  c none"
 "3 c #E0E0E0"
 "4 c none"
-"!!  !!  !!  !!  !!  !!  !!  !!  "
-"!!  !!  !!  !!  !!  !!  !!  !!  "
+" !!!!!!!!!!!!!!  !!!!!!!!!!!!!! "
 ;12345678901234567890123456789012
 String1=0x19,просека
 String2=0x04,cutline
@@ -2375,7 +2374,7 @@ SubType=0x00
 String1=0x19,урочище
 String2=0x04,locality
 ExtendedLabels=Y
-FontStyle=SmallFont
+FontStyle=NormalFont
 CustomColor=DayAndNight
 DaycustomColor:#FF4040
 NightcustomColor:#A0A0A0
