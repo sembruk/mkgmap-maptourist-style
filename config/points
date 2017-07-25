@@ -282,8 +282,8 @@ leisure=track { name '${name} (${sport})' | '${name}' } [0x2c08 resolution 24 de
 leisure=water_park [0x2b04 resolution 24 default_name 'аквапарк']
 leisure=resort { name '${name} ${operator}' | '${name}' | '${operator}' } [0x2b01 resolution 24]
 
-man_made=tower | tower:type!=communication [0x6411 resolution 22 default_name 'башня']
-man_made=tower | tower:type=communication [0x6414 resolution 22]
+man_made=tower & tower:type=communication [0x6414 resolution 22]
+man_made=tower [0x6411 resolution 22 default_name 'башня']
 man_made=water_tower [0x6412 resolution 22]
 man_made=mast [0x6413 resolution 22]
 man_made=chimney [0x6416 resolution 22]
