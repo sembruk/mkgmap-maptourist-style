@@ -305,6 +305,7 @@ natural=water & name=* [0x650d resolution 21]
 natural=waterfall | waterway=waterfall [0x6508 resolution 21 default_name 'водопад']
 natural=wetland & name=* [0x6513 resolution 21]
 natural=wood & name=* [0x6618 resolution 21]
+boundary=forest_compartment | boundary=forestry_compartment {name '${name}' | '${ref}'} [0x3301 resolution 21]
 
 ### сокращение статусов НП
 cladr:suffix='Город'
