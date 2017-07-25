@@ -116,17 +116,18 @@ bridge=no	{delete highway; delete rail; delete bridge}
 
 # Flag unpaved roads.
 highway=*
+& surface!=asphalt & surface!=concrete & surface!=concrete:plates
 & (surface=cobblestone | surface=compacted | surface=dirt |
    surface=earth | surface=grass | surface=grass_paver |
    surface=gravel | surface=grit | surface=ground | surface=mud |
    surface=pebblestone | surface=sand | surface=unpaved |
-   surface=concrete |
    mtb:scale=* |
    tracktype ~ 'grade[2-6]' |
    smoothness ~ '.*(bad|horrible|impassable)' |
    sac_scale ~ '.*(mountain|alpine)_hiking' |
    sport=via_ferrata)
 { add mkgmap:unpaved=1 }
+
 (highway=bridleway | highway=path | highway=track | highway=unsurfaced)
 & surface!=* & tracktype!=* & smoothness!=* & sac_scale!=*
 { add mkgmap:unpaved=1 }

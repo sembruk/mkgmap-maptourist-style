@@ -1556,6 +1556,7 @@ Xpm="32 1 4  1"
 "3 c #E0E0E0"
 "4 c none"
 " !!!!!!  !!!!!!  !!!!!!  !!!!!! "
+" !!!!!!  !!!!!!  !!!!!!  !!!!!! "
 ;12345678901234567890123456789012
 String1=0x19,грунтовка
 String2=0x04,track
@@ -1782,7 +1783,7 @@ Type=0x1c
 ;GRMN_TYPE: Political Borders/MJR_PLTCL_BDRY/Major political boundary (typically used for state, provincial borders)/Non NT
 UseOrientation=Y
 Xpm="32 3 4  1"
-"! c #000000"
+"! c #808080"
 "  c none"
 "3 c #E0E0E0"
 "4 c none"
