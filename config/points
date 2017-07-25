@@ -282,7 +282,12 @@ leisure=track { name '${name} (${sport})' | '${name}' } [0x2c08 resolution 24 de
 leisure=water_park [0x2b04 resolution 24 default_name 'аквапарк']
 leisure=resort { name '${name} ${operator}' | '${name}' | '${operator}' } [0x2b01 resolution 24]
 
-man_made=tower [0x6411 resolution 22 default_name 'башня']
+man_made=tower | tower:type!=communication [0x6411 resolution 22 default_name 'башня']
+man_made=tower | tower:type=communication [0x6414 resolution 22]
+man_made=water_tower [0x6412 resolution 22]
+man_made=mast [0x6413 resolution 22]
+man_made=chimney [0x6416 resolution 22]
+amenity=hunting_stand | leisure=bird_hide | leisure=wildlife_hide [0x6415 resolution 22]
 power=generator & generator:source=wind [0x641a resolution 22 default_name 'ветряк']
 man_made=windmill [0x641b resolution 22 default_name 'мельница']
 
@@ -442,7 +447,7 @@ tourism=information {name '${name} - ${description} (${operator})'|
 '${name} - (${description})' | '${name}' | '${description}' |
 '${operator}' | '${ref}'} [0x4c00 resolution 24 default_name 'информация']
 tourism=museum [0x2c02 resolution 24 default_name 'музей']
-tourism=picnic_site [0x4a00 resolution 21 default_name 'пикник']
+tourism=picnic_site | tourism=picnic_table [0x4a00 resolution 21 default_name 'пикник']
 tourism=theme_park [0x2c01 resolution 24 default_name 'лунапарк']
 tourism=viewpoint {name '${name} - ${description}' | '${name}'} [0x2c04 resolution 21 default_name 'хороший вид']
 tourism=wine_cellar [0x2c0a resolution 24 default_name 'винный погреб']
@@ -450,16 +455,16 @@ tourism=zoo [0x2c07 resolution 24 default_name 'зоопарк']
 
 barrier=bollard | barrier=bus_trap
     {add access = no; add bicycle = yes; add foot = yes} [0x660f resolution 24 default_name 'преграда']
-barrier=block | barrier=cycle_barrier | barrier=stile | barrier=kissing_gate
+barrier=block | barrier=cycle_barrier | barrier=stile | barrier=kissing_gate | barrier=debris
     {add access = no; add foot = yes} [0x660f resolution 24 default_name 'преграда']
 
-# My
 highway=traffic_signals | crossing=traffic_signals [0x1616 resolution 24 default_name 'светофор']
 railway=level_crossing [0x1615 resolution 24 default_name 'переезд']
 barrier=gate 
-	{set access = no} [0x5800 resolution 24 default_name 'ворота']
+	{set access = no} [0x5802 resolution 24 default_name 'ворота']
 barrier=lift_gate 
-	{set access = no} [0x5800 resolution 24 default_name 'шлагбаум']
+	{set access = no} [0x5801 resolution 24 default_name 'шлагбаум']
+barrier=log {add access = no; add foot = yes} [0x5803 resolution 24]
 amenity=signpost { name '${label}' } [0x5a00 resolution  21 default_name 'указатель']
 traffic_sign=city_limit [0x5600 resolution 21 default_name 'ограничение']
 highway=ford | ford=yes [0x6406 resolution 21 default_name 'брод']
