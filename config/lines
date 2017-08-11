@@ -266,7 +266,7 @@ highway=residential & area!=yes {add mkgmap:display_name = '${name}'} [0x0d road
 highway=bridleway {add access = no; add bicycle = yes; add foot = yes} [0x16 road_class=0 road_speed=0 resolution 22]
 highway=byway [0x16 road_class=0 road_speed=0 resolution 22]
 highway=service & oneway=yes {add mkgmap:display_name = '${name}'} [0x07 road_class=0 road_speed=1 resolution 22]
-highway=service {add mkgmap:display_name = '${name}'} [0x07 road_class=0 road_speed=1 resolution 24]
+highway=service {add mkgmap:display_name = '${name}'} [0x07 road_class=0 road_speed=1 resolution 22]
 highway=cycleway {add access = no; add bicycle = yes; add foot = yes} [0x16 road_class=0 road_speed=1 resolution 22]
 highway=footway {add access = no; add foot = yes} [0x16 road_class=0 road_speed=0 resolution 22]
 highway=path {add access = no; add bicycle = yes; add foot = yes} [0x16 road_class=0 road_speed=0 resolution 22]
